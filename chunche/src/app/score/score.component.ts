@@ -10,7 +10,7 @@ export class ScoreComponent implements OnInit {
 
   contador: number = 0;
   nombre: string = "";
-
+  
   constructor() { }
 
   ngOnInit(): void {

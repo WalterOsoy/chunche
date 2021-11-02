@@ -8,15 +8,56 @@
           <h2>Calificaci&oacute;n Estrella : ¿Dónde compraste tu chunche?</h2>
         </div>
         <div class="card-body">
-          <div class="col-12" style="text-align: center;">
-            <h4 class="card-title">¿QUÉ TAL TE PARECIO EL RESULTADO?</h4>
-            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="1star"></span>
-            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="2star"></span>
-            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="3star"></span>
-            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="4star"></span>
-            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="5star"></span>
-            <br><br>
-            <button class="btn btn-primary" (click)="mensaje()">PUNTUAR</button>
+          <div class="col-12">
+            <table class="table" id="tabla_puntuar">
+              <thead class="thead-dark">
+                <tr>
+                  <th>No.</th>
+                  <th>Nombre de Busqueda</th>
+                  <th>Imagen</th>
+                  <th>Score</th>
+                  <th>Puntuaci&oacute;n</th>
+                  <th>Acci&oacute;n</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>1</td>
+                  <td>Walter</td>
+                  <td>hoa.png</td>
+                  <td>0</td>
+                  <td>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="1walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="2walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="3walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="4walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="5walter"></span>
+                  </td>
+                  <td>
+                    <button class="ver btn btn-primary" (click)="mensaje()">PUNTUAR</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>ulises</td>
+                  <td>hoa.png</td>
+                  <td>0</td>
+                  <td>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="1ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="2ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="3ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="4ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="5ulises"></span>
+                  </td>
+                  <td>
+                    <button class="ver btn btn-primary" (click)="mensaje()">PUNTUAR</button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

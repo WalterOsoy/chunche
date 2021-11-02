@@ -1,1 +1,25 @@
-<p>score works!</p>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<div class="col-12">
+    <br>
+    <div class="card">
+        <div class="card-header">
+          <h2>Calificaci&oacute;n Estrella : ¿Dónde compraste tu chunche?</h2>
+        </div>
+        <div class="card-body">
+          <div class="col-12" style="text-align: center;">
+            <h4 class="card-title">¿QUÉ TAL TE PARECIO EL RESULTADO?</h4>
+            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="1star"></span>
+            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="2star"></span>
+            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="3star"></span>
+            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="4star"></span>
+            <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="5star"></span>
+            <br><br>
+            <button class="btn btn-primary" (click)="mensaje()">PUNTUAR</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+

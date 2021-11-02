@@ -1,1 +1,66 @@
-<p>score works!</p>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<div class="col-12">
+    <br>
+    <div class="card">
+        <div class="card-header">
+          <h2>Calificaci&oacute;n Estrella : ¿Dónde compraste tu chunche?</h2>
+        </div>
+        <div class="card-body">
+          <div class="col-12">
+            <table class="table" id="tabla_puntuar">
+              <thead class="thead-dark">
+                <tr>
+                  <th>No.</th>
+                  <th>Nombre de Busqueda</th>
+                  <th>Imagen</th>
+                  <th>Score</th>
+                  <th>Puntuaci&oacute;n</th>
+                  <th>Acci&oacute;n</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>1</td>
+                  <td>Walter</td>
+                  <td>hoa.png</td>
+                  <td>0</td>
+                  <td>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="1walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="2walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="3walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="4walter"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="5walter"></span>
+                  </td>
+                  <td>
+                    <button class="ver btn btn-primary" (click)="mensaje()">PUNTUAR</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>ulises</td>
+                  <td>hoa.png</td>
+                  <td>0</td>
+                  <td>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="1ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="2ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="3ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="4ulises"></span>
+                    <span class="fa fa-star" (click)="calificar($event)" style="cursor: pointer;" id="5ulises"></span>
+                  </td>
+                  <td>
+                    <button class="ver btn btn-primary" (click)="mensaje()">PUNTUAR</button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+</div>
+
+

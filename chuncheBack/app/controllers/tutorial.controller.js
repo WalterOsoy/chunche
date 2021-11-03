@@ -73,22 +73,26 @@ exports.update = (req, res) => {
       message: "Data to update can not be empty!"
     });
   }
+  let updates = req.body //we set a variable equal to the entire req.body
+  Tutorial.findOneAndUpdate({ name: req.params.name }, updates, { new: true })
+    .then(updatedPuppy => res.json(updatedPuppy))
+    .catch(err => res.status(400).json("Error: " + err))
+  /** 
+  const name = req.params.name;
 
-  const id = req.params.id;
-
-  Tutorial.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  Tutorial.find(name)//, req.body, { useFindAndModify: false })
     .then(data => {
       if (!data) {
         res.status(404).send({
-          message: `Cannot update Tutorial with id=${id}. Maybe Tutorial was not found!`
+          message: `Cannot update Tutorial with name=${name}. Maybe Tutorial was not found!`
         });
       } else res.send({ message: "Tutorial was updated successfully." });
     })
     .catch(err => {
       res.status(500).send({
-        message: "Error updating Tutorial with id=" + id
+        message: "Error updating Tutorial with name=" + name
       });
-    });
+    });*/
 };
 
 /*

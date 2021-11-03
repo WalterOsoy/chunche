@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScoreService } from 'src/app/services/score.service';
 //import { DOCUMENT } from '@angular/common'; 
 
 @Component({
@@ -10,8 +11,17 @@ export class ScoreComponent implements OnInit {
 
   contador: number = 0;
   nombre: string = "";
-  
-  constructor() { }
+
+  chunche = {
+    image: '',
+    url: '',
+    name: '',
+    score: 0
+  };
+  submitted = false;
+
+  constructor(private scoreService: ScoreService) { }
+
 
   ngOnInit(): void {
   }
@@ -34,6 +44,25 @@ export class ScoreComponent implements OnInit {
 
   mensaje(){
     alert("Gracias por puntuar este chunche!!! Usted nos dio " + this.contador + " estrellas!!!");
+  }
+
+  saveTutorial(): void {
+    const data = {
+      iamge: this.chunche.image,
+      url: this.chunche.url,
+      name: this.chunche.name,
+      score: this.chunche.score
+    };
+
+    this.scoreService.create(data)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.submitted = true;
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 

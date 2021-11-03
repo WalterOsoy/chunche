@@ -1,21 +1,9 @@
 module.exports = mongoose => {
     var schema = mongoose.Schema(
       {
-        webSearchUrl: String,
+        image: String,
+        url: String,
         name: String,
-        thumbnailUrl: String,
-        datePublished: String,
-        contentUrl: String,
-        hostPageUrl: String,
-        contentSize: String,
-        encodingFormat: String,
-        hostPageDisplayUrl: String,
-        width: Number,
-        height: Number,
-        thumbnail: {
-          width: Number,
-          height: Number
-        },
         score: Number
       }
     );
@@ -26,6 +14,6 @@ module.exports = mongoose => {
       return object;
     });*/
   
-    const Tutorial = mongoose.model("chunche", schema);
-    return Tutorial;
+    const Chunche = mongoose.model('chunche', schema , 'chunche');
+    return Chunche;
   };

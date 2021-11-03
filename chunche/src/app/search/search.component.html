@@ -3,13 +3,17 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="drop-area">
-                        <h2>Chunche</h2>
-                        <span>o</span>
-                        <button>Seleccionar</button>
-                        <input type="file" name="" id="input-file" hidden >
+                    <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
+                        <ngx-dropzone-label>
+                            <div>
+                                <h2>Drop file</h2>
+                            </div>
+                        </ngx-dropzone-label>
+                        <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files"
+                            [file]="f" [removable]="true" (removed)="onRemove(f)">
+                            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                        </ngx-dropzone-image-preview>
                     </div>
-                    <div id="preview"></div>
                 </div>
                 <div class="col-md-6">
                     <div>

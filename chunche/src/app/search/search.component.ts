@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
 
   onSelect(event: any) {
     console.log(event);
+    console.log(this.files)
     this.files.push(...event.addedFiles);
   }
 

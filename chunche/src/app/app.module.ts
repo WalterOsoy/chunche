@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     MatIconModule,
     HttpClientModule,
     NgxDropzoneModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

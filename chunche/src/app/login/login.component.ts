@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient } from '@angular/common/http'
-import { User } from '../models/user';
-//import { JwtResponse } from '../models/jwt-response'
-//import { Tap } from 'rxjs/operator';
-//import {observable, BehaviorSubjet } from 'rxjs'
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormControl, EmailValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +7,24 @@ import { User } from '../models/user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  profileForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
+  onLogin() {
+    console.warn(this.profileForm.value.email);
+    console.warn(this.profileForm.value.password);
+    if (this.profileForm.value.email == "admin" && this.profileForm.value.email == ""){
+      //ya esta dentro
+      //como cambiar el boton del login
+      console.warn("esta dentro");
+    }
+  }
+
 
 }

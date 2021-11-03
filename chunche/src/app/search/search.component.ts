@@ -7,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SearchComponent implements OnInit {
-  
+
   constructor() { }
-  ngOnInit(): void { 
-    console.log("hello")
+  ngOnInit(): void {
+
+  }
+  files: File[] = [];
+
+  onSelect(event: any) {
+    console.log(event);
+    this.files.push(...event.addedFiles);
   }
 
+  onRemove(event: any) {
+    console.log(event);
+    this.files.splice(this.files.indexOf(event), 1);
+  }
 }
